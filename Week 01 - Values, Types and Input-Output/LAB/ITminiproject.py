@@ -25,6 +25,7 @@ print()
 print("=" * 34)
 # Prints a certain number of "="
 print(f"  RECORD CHECK  -  {label}")
+# write srv-... since in IT
 print("=" * 34)
 # f is used to format the output in a secific form
 

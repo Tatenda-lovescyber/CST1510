@@ -34,6 +34,7 @@ print(f" TOTAL GB :{second:>10.2f}")
 print(f" FREE   :{difference:>+10.2f}")
 # difference printed as positive or negative sign and to 2 s.f
 print(f" PERCENT     :{percent:>10.2f}")
+#The percent will show as 2 s.f
 
 
 print("=" * 34)

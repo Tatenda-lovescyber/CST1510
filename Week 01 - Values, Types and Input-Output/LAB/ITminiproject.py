@@ -28,12 +28,12 @@ print(f"  RECORD CHECK  -  {label}")
 print("=" * 34)
 # f is used to format the output in a secific form
 
-print(f" First value  :{first:>10.2f}")
-print(f" Second value :{second:>10.2f}")
+print(f" GB USED :{first:>10.2f}")
+print(f" TOTAL GB :{second:>10.2f}")
 # float print to 2 s.f
-print(f" Difference   :{difference:>+10.2f}")
+print(f" DIFFERENCE   :{difference:>+10.2f}")
 # difference printed as positive or negative sign and to 2 s.f
-print(f" Percent      :{percent:>10.2f}")
+print(f" PERCENT     :{percent:>10.2f}")
 
 
 print("=" * 34)

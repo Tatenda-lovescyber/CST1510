@@ -16,6 +16,7 @@ Delete these instructions as you replace them with your code.
 label = input("Enter a label for the record: ")   
 first = float(input("Enter the first value: "))    
 second = float(input("Enter the second value: ")) 
+# no need to put float on difference
 
 difference = first - second 
 percent = (first/second) * 100     

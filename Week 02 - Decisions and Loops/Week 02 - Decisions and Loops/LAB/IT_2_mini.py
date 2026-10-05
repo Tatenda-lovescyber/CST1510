@@ -24,7 +24,7 @@ while True:
     difference = limit - value  
     percent = (value/limit) * 100
 
-    #make sure status ends up equalling the statements
+    # status to show in the output as well.
     status = 88.4
 
     if percent >= 100:

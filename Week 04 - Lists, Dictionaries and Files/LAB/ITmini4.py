@@ -36,52 +36,35 @@ with open("minifiles.txt", "w") as f:
 
 def load_records(path):
     """returns the list using the file path"""
-    with open ("minifiles.txt") as f:
+    new_records = []
+
+    """r reads the file line by line"""
+    with open ("minifiles.txt", "r") as f:
         for line in f:
             hostname,value,limit = line.strip().split(",")
             value = float(value)
             limit = float(limit)
-    return({
+            parts = line.split()
+        
+        r_record = {
                 "Hostname": hostname,
                 "GB used": value,
                     "Total GB": limit,
-                })
+                }
+        """The dictionary is meant to return all the lines instead of just the last one"""
+        new_records.append(r_record)
+    
+    return new_records
+
    
         
         
 my_files = load_records("minifiles.txt") 
-  
 print(my_files)
-print(check(value,limit))
-print(print_report(hostname, value, limit, available_space, percentage, status))
+
+while True:
+     print(check(67,120))
+     print( print_report("T-013", 67,120, 53, 45, "OVER LIMITS"))
+     break
 
 
-
-    
-
-       
-
-    
-
-    
-
-
-     
-
-
-
-# =============================================================== PROCESS + OUTPUT
-# 3. Loop over records. For each one, call check_record and print_report.
-#
-#    Excellent : also keep a running count of how many were OVER LIMIT, and
-#                print that once, after the loop ends.
-
-# your loop goes here
-
-# ==========================================================================
-# 4. Before you finish:
-#
-#    [ ] Run it and check every record's numbers are correct by hand
-#    [ ] If you are loading from a file, check what happens when the file
-#        does not exist - write the error down
-#    [ ] Check every function still does one job

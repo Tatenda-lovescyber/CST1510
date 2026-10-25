@@ -43,11 +43,6 @@ def load_records(path):
         return record
 
 record = load_records("final_records.txt")
-#    Excellent : also keep a running count of how many came back OVER LIMIT
-#                across every record, and print that once, after the loop.
-#                (Simplest: a plain variable outside the loop, same pattern
-#                as Week 4. If you want it to live ON the object instead,
-#                that is a stretch worth trying - but a variable is enough.)
 
 """This now prints each line and its records"""
 for record in record:

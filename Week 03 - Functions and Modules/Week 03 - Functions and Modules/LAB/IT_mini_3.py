@@ -8,6 +8,7 @@ Date  : 10/10/2026
 
 """
 
+
 def status_of(percentage):
     status = 0 
     """This function will return the status of the percent given."""
@@ -40,6 +41,7 @@ while True:
     hostname = input("Please enter a host name: ")   
     if hostname == "quit":
         break
+    """Break basically stops the code loop"""
       
 
     value = float(input("Please enter the amount of GB used: ")) 

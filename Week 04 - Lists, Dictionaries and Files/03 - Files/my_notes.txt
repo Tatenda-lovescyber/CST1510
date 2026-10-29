@@ -1,0 +1,3 @@
+tuples cannot be changed
+lists can be changed
+Notes for later

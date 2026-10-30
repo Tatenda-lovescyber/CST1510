@@ -10,7 +10,8 @@ Date  :  18/10/2026
 #The functions from the previous mini project
 def check(occupied_space,total_space):
     """This function will calculate the difference, percentage and status."""
-    #All calculations happen within this function
+#All calculations happen within this function
+
     available_space = total_space - occupied_space
     percentage = (occupied_space/total_space) * 100
     status = "Over limit" if percentage >= 100 else "OK"

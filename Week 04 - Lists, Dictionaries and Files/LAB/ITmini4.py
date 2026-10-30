@@ -52,7 +52,8 @@ def load_records(path):
                 "GB used": occupied_space,
                 "Total GB": total_space,
                 }
-#Don't forget to append the new record             
+#Don't forget to append the new record 
+#Appending is adding so basically you're adding the line to r_record, creating a list of dicts
             new_records.append(r_record)
     """The dictionary is meant to return all the lines instead of just the last one"""
     return new_records

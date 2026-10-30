@@ -41,7 +41,7 @@ while True:
 
     print(f"USED GB  :   {occupied_space:>10.2f}")
     print(f"TOTAL GB :   {total_space:>10.2f}")
-    print(f"FREE   :   {difference:>10.2f}")
+    print(f"FREE   :   {difference:>+10.2f}")
     print(f"PERCENT:   {percent:>10.2f}")
     print(f"STATUS :   {status:>10}")
 

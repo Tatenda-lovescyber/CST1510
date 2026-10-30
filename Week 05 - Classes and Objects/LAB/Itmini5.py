@@ -43,12 +43,15 @@ def load_records(path):
         for line in f:
                 hostname,used,total  = line.strip().split(",")
                 recs = Record(hostname, used, total)
+    """Append in this instance is to add the values from the class into the new list"""
                 record.append(recs)
         return record
 
-#Make a word equal to the function to mKE IT EASIER TO PRINT
+#Make a word equal to the function to make it easier to print
 all_records = load_records("final_records.txt")
 
+#If you do not specify what the function is being used for it will give you an error 
+#We use for and not while in this instance because we are looping a fixed number of records
 """This now prints each line and its records"""
 for record in all_records:
     print()

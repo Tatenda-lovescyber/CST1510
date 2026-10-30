@@ -7,16 +7,17 @@ Lane  :  IT
 Date  :  03/10/2026
 """
 #Repeats the condition while still true
+#while loop because we do not know how many times someone will run the programme
 while True:
     hostname = input("Please enter a hostname: ")
     if hostname == "quit":
         break
-    #break to stop the loop
+    #break to stop the loop after quit has been repated
 
 
     occupied_space = float(input("Please enter the amount of GB used: "))
     total_space = float(input("Please enter the total amount of GB: "))
-    # float toensure that computer knows the variable type that is bein entere.
+    # float to ensure that computer knows the variable type that is being entered.
 
 
    #Do basically the same thing as in the last one for the calulations
@@ -32,7 +33,7 @@ while True:
     else:
         status = "OK"
   
-    #Ensure everything is in alignment
+    #Ensure everything is in alignment by using f to format
     print()
     print("=" * 34)
     print(f"  RECORD CHECK  -  {hostname}")

@@ -32,7 +32,7 @@ def print_report(hostname, occupied_space, total_space, difference, percentage, 
     print("=" * 34)
     print(f"USED GB  :   {occupied_space:>10.2f}")
     print(f"TOTAL GB :   {total_space:>10.2f}")
-    print(f"FREE   :   {difference:>10.2f}")
+    print(f"FREE   :   {difference:>+10.2f}")
     print(f"PERCENT:   {percentage:>10.2f}")
     print(f"STATUS :   {status:>10}")
     print("=" * 34)

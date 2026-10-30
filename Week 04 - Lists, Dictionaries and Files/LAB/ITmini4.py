@@ -52,8 +52,7 @@ def load_records(path):
                 "GB used": occupied_space,
                 "Total GB": total_space,
                 }
-#Don't forget to append the new record 
-#Appending is adding so basically you're adding the line to r_record, creating a list of dicts
+#Don't forget to append the new record             
             new_records.append(r_record)
     """The dictionary is meant to return all the lines instead of just the last one"""
     return new_records
@@ -64,7 +63,7 @@ def load_records(path):
 my_files = load_records("minifiles.txt") 
 print(my_files)
 
-#In order to call a function without writing what is inside the parameters, make them equal to the objects
+#In order to call a function without writing the variables inside it, make them equal to the objects
 for record in my_files:
     hostname, occupied_space, total_space = record.values()
 

@@ -63,7 +63,7 @@ def load_records(path):
 my_files = load_records("minifiles.txt") 
 print(my_files)
 
-#In order to call a function without writing the variables inside it, make them equal to the objects
+#In order to call a function without writing what is inside the parameters, make them equal to the objects
 for record in my_files:
     hostname, occupied_space, total_space = record.values()
 

@@ -12,7 +12,7 @@ while True:
     hostname = input("Please enter a hostname: ")
     if hostname == "quit":
         break
-    #break to stop the loop after quit has been repated
+#break to stop the loop after quit has been repated
 
 
     occupied_space = float(input("Please enter the amount of GB used: "))
@@ -22,17 +22,19 @@ while True:
 
    #Do basically the same thing as in the last one for the calulations
     difference = total_space - occupied_space
+    #We are trying to get the percentage of how much storage is being used by the server
     percent = (occupied_space/total_space) * 100
 
     # status to show in the output as well.
-    status = 88.4
+    #status to show us if the storage in the server is over the limit, almost or its ok
+    status = 88.4 #put a value as kind of a placeholder
     if percent >= 100:
         status = "OVER LIMIT"
     elif percent >= 90:
         status = "WARNING"
     else:
         status = "OK"
-  
+
     #Ensure everything is in alignment by using f to format
     print()
     print("=" * 34)

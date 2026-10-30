@@ -28,9 +28,9 @@ print("=" * 34)
 print(f"  RECORD CHECK  -  {hostname}")
 # write srv-... since in IT
 print("=" * 34)
-# f is used to format the output in a secific form
-
+# f string is used to format the output in a secific form
 print(f" GB USED :{occupied_space:>10.2f}")
+
 print(f" TOTAL GB :{total_space:>10.2f}")
 # float print to 2 s.f
 print(f" FREE   :{difference:>+10.2f}")

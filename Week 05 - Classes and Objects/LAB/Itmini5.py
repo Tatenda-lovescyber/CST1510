@@ -15,7 +15,7 @@ class Record:
         self.server = label
         self.space_occupied = float(value)
         self.total_space = float(limit)
-#Put float in the initialize function as well otherwise it will be seen as a stringa nd won't be printed
+#Put float in the initialize function as well otherwise it will be seen as a string and won't be printed
     
     """Function to print the statuses of each server"""
     def status(self):

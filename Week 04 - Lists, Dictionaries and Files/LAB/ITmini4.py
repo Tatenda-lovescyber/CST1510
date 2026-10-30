@@ -57,7 +57,7 @@ def load_records(path):
             new_records.append(r_record)
     """The dictionary is meant to return all the lines instead of just the last one"""
     return new_records
-
+#If only the last line is being returned as a list of dicts that means there is something wrong with the indentation.
    
         
  #Make name and give its value as the function to make it easier to call       

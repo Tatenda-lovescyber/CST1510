@@ -6,6 +6,12 @@ Name  : Tatenda Dube
 Lane  : IT 
 Date  : 25/10/2026
 """
+
+#-----------------------------------------------------------------------------------------------------------------------------------------
+#We now introduce class
+#Class allows us to have every function we need in the programme to be written in it 
+#Its like the blueprint
+#Makes the coding look more uniform as well
 """The class is like the blueprint where we write everything"""
 class Record:
 
@@ -15,7 +21,7 @@ class Record:
         self.server = label
         self.space_occupied = float(value)
         self.total_space = float(limit)
-#Put float in the initialize function as well otherwise it will be seen as a string and won't be printed
+#Put float in the initialize function as well otherwise it will be seen as a stringa nd won't be printed
     
     """Function to print the statuses of each server"""
     def status(self):
@@ -28,7 +34,10 @@ class Record:
         else:
             return "Ok"
 
+#--------------------------------------------------------------------------------------------------------------------------------------------
+#Making a function to laod the ines from a file into an empty dictionary
 #Making a file, don't forget w for write 
+#do not forget to remove the coomas from the list using .strip().spli(", ")
 with open("final_records.txt", "w") as f:
     f.write("T-006, 89.0, 100.0\n"),
     f.write("T-009, 40.0, 100.0\n"),
@@ -43,25 +52,26 @@ def load_records(path):
         for line in f:
                 hostname,used,total  = line.strip().split(",")
                 recs = Record(hostname, used, total)
-    """Append in this instance is to add the values from the class into the new list"""
                 record.append(recs)
         return record
 
 #Make a word equal to the function to make it easier to print
 all_records = load_records("final_records.txt")
 
-#If you do not specify what the function is being used for it will give you an error 
-#We use for and not while in this instance because we are looping a fixed number of records
+#-----------------------------------------------------------------------------------------------------------------------------------
+#Make a for loop that immediately prints out the report
+#Make a function that will count the number of servers in the record and the number of them that return as OVER LIMIT
+#it will return the number of servers as well
 """This now prints each line and its records"""
 for record in all_records:
     print()
     print("=" * 34)
     print(f"  RECORD CHECK  -  {record.server}")
     print("=" * 34)
-    print(f"{"Server Name"}:{record.server:>10}")
-    print(f"{"Storage occupied"}:{record.space_occupied:>10.2f}GB")
-    print(f"{"Total Storage"}:{record.total_space:>10.2f}")
-    print(f"{"Server Name"}:{record.status():>10}")
+    print(f"Server Name      :   {record.server:>10}")
+    print(f"Storage occupied :   {record.space_occupied:>10.2f}GB")
+    print(f"Total Storage    :   {record.total_space:>10.2f}")
+    print(f"Server Name      :   {record.status():>10}")
     print("=" * 34)
 #The format seems to not be working the same way as the others were
 
@@ -72,7 +82,7 @@ def count_r(records_list):
     for record in records_list:
         if record.status == "Over Limit":
             count += 1
-    return count
+    return (f"Checked {len(all_records)} records. {count} were over limit.")
 
 over_l = count_r(all_records)
 print(f"This is the number of servers that are over limit: {over_l}")

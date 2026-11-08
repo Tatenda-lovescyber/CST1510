@@ -38,10 +38,6 @@ class Record:
 #Making a function to laod the ines from a file into an empty dictionary
 #Making a file, don't forget w for write 
 #do not forget to remove the coomas from the list using .strip().spli(", ")
-with open("final_records.txt", "w") as f:
-    f.write("T-006, 89.0, 100.0\n"),
-    f.write("T-009, 40.0, 100.0\n"),
-    f.write("T-011, 140.0, 100.0\n"),
 
 """to write the file into a list"""
 def load_records(path):
@@ -56,7 +52,7 @@ def load_records(path):
         return record
 
 #Make a word equal to the function to make it easier to print
-all_records = load_records("final_records.txt")
+all_records = load_records("minifiles.txt")
 
 #-----------------------------------------------------------------------------------------------------------------------------------
 #Make a for loop that immediately prints out the report
